@@ -1,4 +1,4 @@
-# Motorcycle Sales Analysis
+# Motorcycle Sales Analysis (PostgreSQL)
 
 A company that sells motorcycle parts has requested help in analyzing their sales data.
 
