@@ -1,21 +1,24 @@
-# Motorcycle Sales Analysis (PostgreSQL)
+# 🏍️ Motorcycle Sales Analysis (PostgreSQL)
 
-A company that sells motorcycle parts has requested help in analyzing their sales data.
+## Project Objective
 
-They operate three warehouses in the area, selling both **retail** and **wholesale**. They offer a variety of parts and accept payments via **credit card**, **cash**, and **bank transfer** — each with a different fee structure.
+- Analyze **wholesale revenue** by **product line**.
+- Understand how revenue varies **month-to-month** and **across warehouses**.
 
-### Project Objective
+## Approach
 
-The board of directors wants to:
+- Filter data for **Wholesale** orders.
+- Calculate **net revenue** after adjusting for payment method fees.
+- Group results by **month**, **warehouse**, and **product line**.
+- Summarize total **net revenue**.
 
-- Gain a better understanding of **wholesale revenue** by **product line**.
-- Analyze how revenue **varies month-to-month** and **across warehouses**.
+## PostgreSQL Techniques and Tools Used
 
-### Task
-
-You have been tasked with:
-
-- Calculating **net revenue** for each product line.
-- Grouping the results by **month** and **warehouse**.
-- Filtering the data to include only **"Wholesale"** orders.
-
+- `WHERE` clause to filter for **"Wholesale"** orders.
+- `EXTRACT()` function to extract **month** and **year**.
+- `CASE WHEN` for **payment fee adjustments**.
+- `SUM()` aggregation for **total revenue**.
+- `GROUP BY` for **structured aggregation**.
+- **CTEs** (Common Table Expressions) for cleaner queries.
+- `JOIN` to combine **sales** and **warehouses** tables.
+- **Indexes** (optional) to improve query performance.
